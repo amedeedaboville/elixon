@@ -21,6 +21,10 @@ config :elixon, Elixon.Web.Endpoint,
 # Do not print debug messages in production
 config :logger, level: :info
 
+# Change the streaming url
+config :x,
+streaming_api_base_url: ENV.fetch('STREAMING_API_BASE_URL') { "ws#{https ? 's' : ''}://#{web_host}" }
+
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key
