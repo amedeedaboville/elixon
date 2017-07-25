@@ -1,7 +1,7 @@
-defmodule Elixon.Accounts do
+defmodule Elixon.Account do
   use Ecto.Schema
   import Ecto.Changeset
-  alias Elixon.Accounts
+  alias Elixon.Account
 
 
   schema "accounts" do
@@ -39,8 +39,8 @@ defmodule Elixon.Accounts do
   end
 
   @doc false
-  def changeset(%Accounts{} = accounts, attrs) do
-    accounts
+  def changeset(%Account{} = account, attrs) do
+    account
     |> cast(attrs, [:username])
     |> validate_required([:username])
   end

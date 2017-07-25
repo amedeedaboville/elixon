@@ -20,6 +20,7 @@ defmodule Elixon.Web do
     quote do
       use Phoenix.Controller, namespace: Elixon.Web
       import Plug.Conn
+      import Elixon.Web.Helpers
       import Elixon.Web.Router.Helpers
       import Elixon.Web.Gettext
       import Canary.Plugs
@@ -34,6 +35,7 @@ defmodule Elixon.Web do
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_csrf_token: 0, get_flash: 2, view_module: 1]
 
+      import Elixon.Web.Helpers
       import Elixon.Web.Router.Helpers
       import Elixon.Web.ErrorHelpers
       import Elixon.Web.Gettext

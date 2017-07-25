@@ -34,7 +34,7 @@ defmodule Elixon.Web.Router do
           post "/unmute", MutesController, :delete, as: :delete
         end
 
-        get "/context", StatusController, :context#, as: :context
+        get "/context", StatusController, :context, as: :context
         get "/card", StatusController, :card, as: :card
       end
 
@@ -86,6 +86,13 @@ defmodule Elixon.Web.Router do
         post "/unblock",  AccountsController, :unblock, as: :unblock
         post "/mute",     AccountsController, :mute, as: :mute
         post "/unmute",   AccountsController, :unmute, as: :unmute
+      end
+    end
+
+    scope "/web" do
+      resources "/settings", SettingsController, only: [:update], singleton: true
+      resources "/push_subscriptions", PushSubscriptionsController, only: [:create] do
+          put "/update", PushSubscriptionsController, :update, as: :update
       end
     end
   end
