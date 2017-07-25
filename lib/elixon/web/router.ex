@@ -4,7 +4,13 @@ defmodule Elixon.Web.Router do
   pipeline :api do
     plug :accepts, ["json"]
   end
-
+    
+  get  "/", HomeController, :index
+  get "/about",      AboutController, :show
+  get "/about/more", AboutController, :more
+  get "/terms",      AboutController, :terms
+  get "/web/*any", HomeController, :index, as: :web
+    
   scope "/api", Elixon.Web do
     pipe_through :api
 
