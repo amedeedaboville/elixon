@@ -1,0 +1,325 @@
+
+schema "account_domain_blocks" do
+	field: account_id, :integer
+	field: domain, :string
+	field: created_at, :utc_datetime
+	field: updated_at, :utc_datetime
+	timestamps :inserted_at, :created_at
+end
+schema "accounts" do
+	field: username, :string, default: ""
+	field: domain, :string
+	field: secret, :string, default: ""
+	field: private_key, :string
+	field: public_key, :string, default: ""
+	field: remote_url, :string, default: ""
+	field: salmon_url, :string, default: ""
+	field: hub_url, :string, default: ""
+	field: created_at, :utc_datetime
+	field: updated_at, :utc_datetime
+	field: note, :string, default: ""
+	field: display_name, :string, default: ""
+	field: uri, :string, default: ""
+	field: url, :string
+	field: avatar_file_name, :string
+	field: avatar_content_type, :string
+	field: avatar_file_size, :integer
+	field: avatar_updated_at, :utc_datetime
+	field: header_file_name, :string
+	field: header_content_type, :string
+	field: header_file_size, :integer
+	field: header_updated_at, :utc_datetime
+	field: avatar_remote_url, :string
+	field: subscription_expires_at, :utc_datetime
+	field: silenced, :boolean, default: false
+	field: suspended, :boolean, default: false
+	field: locked, :boolean, default: false
+	field: header_remote_url, :string, default: ""
+	field: statuses_count, :integer, default: 0
+	field: followers_count, :integer, default: 0
+	field: following_count, :integer, default: 0
+	field: last_webfingered_at, :utc_datetime
+	timestamps :inserted_at, :created_at
+end
+schema "blocks" do
+	field: account_id, :integer
+	field: target_account_id, :integer
+	field: created_at, :utc_datetime
+	field: updated_at, :utc_datetime
+	timestamps :inserted_at, :created_at
+end
+schema "conversation_mutes" do
+	field: account_id, :integer
+	field: conversation_id, :integer
+	timestamps :inserted_at, :created_at
+end
+schema "conversations" do
+	field: uri, :string
+	field: created_at, :utc_datetime
+	field: updated_at, :utc_datetime
+	timestamps :inserted_at, :created_at
+end
+schema "domain_blocks" do
+	field: domain, :string, default: ""
+	field: created_at, :utc_datetime
+	field: updated_at, :utc_datetime
+	field: severity, :integer, default: 0
+	field: reject_media, :boolean, default: false
+	timestamps :inserted_at, :created_at
+end
+schema "favourites" do
+	field: account_id, :integer
+	field: status_id, :integer
+	field: created_at, :utc_datetime
+	field: updated_at, :utc_datetime
+	timestamps :inserted_at, :created_at
+end
+schema "follow_requests" do
+	field: account_id, :integer
+	field: target_account_id, :integer
+	field: created_at, :utc_datetime
+	field: updated_at, :utc_datetime
+	timestamps :inserted_at, :created_at
+end
+schema "follows" do
+	field: account_id, :integer
+	field: target_account_id, :integer
+	field: created_at, :utc_datetime
+	field: updated_at, :utc_datetime
+	timestamps :inserted_at, :created_at
+end
+schema "imports" do
+	field: account_id, :integer
+	field: type, :integer
+	field: approved, :boolean, default: false
+	field: created_at, :utc_datetime
+	field: updated_at, :utc_datetime
+	field: data_file_name, :string
+	field: data_content_type, :string
+	field: data_file_size, :integer
+	field: data_updated_at, :utc_datetime
+	timestamps :inserted_at, :created_at
+end
+schema "media_attachments" do
+	field: status_id, :integer
+	field: file_file_name, :string
+	field: file_content_type, :string
+	field: file_file_size, :integer
+	field: file_updated_at, :utc_datetime
+	field: remote_url, :string, default: ""
+	field: account_id, :integer
+	field: created_at, :utc_datetime
+	field: updated_at, :utc_datetime
+	field: shortcode, :string
+	field: type, :integer, default: 0
+	field: file_meta, :map
+	timestamps :inserted_at, :created_at
+end
+schema "mentions" do
+	field: account_id, :integer
+	field: status_id, :integer
+	field: created_at, :utc_datetime
+	field: updated_at, :utc_datetime
+	timestamps :inserted_at, :created_at
+end
+schema "mutes" do
+	field: account_id, :integer
+	field: target_account_id, :integer
+	field: created_at, :utc_datetime
+	field: updated_at, :utc_datetime
+	timestamps :inserted_at, :created_at
+end
+schema "notifications" do
+	field: account_id, :integer
+	field: activity_id, :integer
+	field: activity_type, :string
+	field: created_at, :utc_datetime
+	field: updated_at, :utc_datetime
+	field: from_account_id, :integer
+	timestamps :inserted_at, :created_at
+end
+schema "oauth_access_grants" do
+	field: resource_owner_id, :integer
+	field: application_id, :integer
+	field: token, :string
+	field: expires_in, :integer
+	field: redirect_uri, :string
+	field: created_at, :utc_datetime
+	field: revoked_at, :utc_datetime
+	field: scopes, :string
+	timestamps :inserted_at, :created_at
+end
+schema "oauth_access_tokens" do
+	field: resource_owner_id, :integer
+	field: application_id, :integer
+	field: token, :string
+	field: refresh_token, :string
+	field: expires_in, :integer
+	field: revoked_at, :utc_datetime
+	field: created_at, :utc_datetime
+	field: scopes, :string
+	timestamps :inserted_at, :created_at
+end
+schema "oauth_applications" do
+	field: name, :string
+	field: uid, :string
+	field: secret, :string
+	field: redirect_uri, :string
+	field: scopes, :string, default: ""
+	field: created_at, :utc_datetime
+	field: updated_at, :utc_datetime
+	field: superapp, :boolean, default: false
+	field: website, :string
+	timestamps :inserted_at, :created_at
+end
+schema "preview_cards" do
+	field: status_id, :integer
+	field: url, :string, default: ""
+	field: title, :string
+	field: description, :string
+	field: image_file_name, :string
+	field: image_content_type, :string
+	field: image_file_size, :integer
+	field: image_updated_at, :utc_datetime
+	field: created_at, :utc_datetime
+	field: updated_at, :utc_datetime
+	field: type, :integer, default: 0
+	field: html, :string, default: ""
+	field: author_name, :string, default: ""
+	field: author_url, :string, default: ""
+	field: provider_name, :string, default: ""
+	field: provider_url, :string, default: ""
+	field: width, :integer, default: 0
+	field: height, :integer, default: 0
+	timestamps :inserted_at, :created_at
+end
+schema "reports" do
+	field: account_id, :integer
+	field: target_account_id, :integer
+	field: status_ids, {:array, :integer}, default: []
+	field: comment, :string, default: ""
+	field: action_taken, :boolean, default: false
+	field: created_at, :utc_datetime
+	field: updated_at, :utc_datetime
+	field: action_taken_by_account_id, :integer
+	timestamps :inserted_at, :created_at
+end
+schema "session_activations" do
+	field: user_id, :integer
+	field: session_id, :string
+	field: created_at, :utc_datetime
+	field: updated_at, :utc_datetime
+	field: user_agent, :string, default: ""
+	field: ip, :EctoNetwork.INET
+	field: access_token_id, :integer
+	field: web_push_subscription_id, :integer
+	timestamps :inserted_at, :created_at
+end
+schema "settings" do
+	field: var, :string
+	field: value, :string
+	field: thing_type, :string
+	field: thing_id, :integer
+	field: created_at, :utc_datetime
+	field: updated_at, :utc_datetime
+	timestamps :inserted_at, :created_at
+end
+schema "statuses" do
+	field: uri, :string
+	field: account_id, :integer
+	field: text, :string, default: ""
+	field: created_at, :utc_datetime
+	field: updated_at, :utc_datetime
+	field: in_reply_to_id, :integer
+	field: reblog_of_id, :integer
+	field: url, :string
+	field: sensitive, :boolean, default: false
+	field: visibility, :integer, default: 0
+	field: in_reply_to_account_id, :integer
+	field: application_id, :integer
+	field: spoiler_text, :string, default: ""
+	field: reply, :boolean, default: false
+	field: favourites_count, :integer, default: 0
+	field: reblogs_count, :integer, default: 0
+	field: language, :string
+	field: conversation_id, :integer
+	timestamps :inserted_at, :created_at
+end
+schema "statuses_tags" do
+	field: status_id, :integer
+	field: tag_id, :integer
+	timestamps :inserted_at, :created_at
+end
+schema "stream_entries" do
+	field: account_id, :integer
+	field: activity_id, :integer
+	field: activity_type, :string
+	field: created_at, :utc_datetime
+	field: updated_at, :utc_datetime
+	field: hidden, :boolean, default: false
+	timestamps :inserted_at, :created_at
+end
+schema "subscriptions" do
+	field: callback_url, :string, default: ""
+	field: secret, :string
+	field: expires_at, :utc_datetime
+	field: confirmed, :boolean, default: false
+	field: account_id, :integer
+	field: created_at, :utc_datetime
+	field: updated_at, :utc_datetime
+	field: last_successful_delivery_at, :utc_datetime
+	field: domain, :string
+	timestamps :inserted_at, :created_at
+end
+schema "tags" do
+	field: name, :string, default: ""
+	field: created_at, :utc_datetime
+	field: updated_at, :utc_datetime
+	timestamps :inserted_at, :created_at
+end
+schema "users" do
+	field: email, :string, default: ""
+	field: account_id, :integer
+	field: created_at, :utc_datetime
+	field: updated_at, :utc_datetime
+	field: encrypted_password, :string, default: ""
+	field: reset_password_token, :string
+	field: reset_password_sent_at, :utc_datetime
+	field: remember_created_at, :utc_datetime
+	field: sign_in_count, :integer, default: 0
+	field: current_sign_in_at, :utc_datetime
+	field: last_sign_in_at, :utc_datetime
+	field: current_sign_in_ip, :EctoNetwork.INET
+	field: last_sign_in_ip, :EctoNetwork.INET
+	field: admin, :boolean, default: false
+	field: confirmation_token, :string
+	field: confirmed_at, :utc_datetime
+	field: confirmation_sent_at, :utc_datetime
+	field: unconfirmed_email, :string
+	field: locale, :string
+	field: encrypted_otp_secret, :string
+	field: encrypted_otp_secret_iv, :string
+	field: encrypted_otp_secret_salt, :string
+	field: consumed_timestep, :integer
+	field: otp_required_for_login, :boolean, default: false
+	field: last_emailed_at, :utc_datetime
+	field: otp_backup_codes, {:array, :string}
+	field: filtered_languages, {:array, :string}, default: []
+	timestamps :inserted_at, :created_at
+end
+schema "web_push_subscriptions" do
+	field: endpoint, :string
+	field: key_p256dh, :string
+	field: key_auth, :string
+	field: data, :map
+	field: created_at, :utc_datetime
+	field: updated_at, :utc_datetime
+	timestamps :inserted_at, :created_at
+end
+schema "web_settings" do
+	field: user_id, :integer
+	field: data, :map
+	field: created_at, :utc_datetime
+	field: updated_at, :utc_datetime
+	timestamps :inserted_at, :created_at
+end
