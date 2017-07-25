@@ -8,6 +8,17 @@ defmodule Elixon.Web.Router do
   scope "/api", Elixon.Web do
     pipe_through :api
 
+    # PubSubHubbub outgoing subscriptions
+    resources "/subscriptions", SubscriptionsController, only: [:show]
+    post "/subscriptions", SubscriptionsController, :update
+
+    # PubSubHubbub incoming subscriptions
+    post "/push", PushController, :update, as: :push
+
+    post "/salmon", SalmonController, :update,  as: :salmon
+    get "/oembed", OEmbedController, :show, as: :oembed
+
+    # JSON / REST API
     scope "/v1", Api.V1 do
       resources "/statuses", StatusController, only: [:create, :show, :delete] do
         scope "/", Elixon.Web.Status do
@@ -23,7 +34,7 @@ defmodule Elixon.Web.Router do
           post "/unmute", MutesController, :delete, as: :delete
         end
 
-        get "/context", StatusController, :context, as: :context
+        get "/context", StatusController, :context#, as: :context
         get "/card", StatusController, :card, as: :card
       end
 
@@ -64,10 +75,10 @@ defmodule Elixon.Web.Router do
         resources "/search", SearchController, only: [:show], singleton: true
         resources "/relationships", RelationshipsController, only: [:index]
       end
-      resources "/accounts", AccountsController, only: [:show] do
+      resources "/accounts", AccountController, only: [:show] do
         resources "/statuses", StatusesController, only: [:index]
-        resources "/followers", FollowersController,only: [:index]
-        resources "/following", FollowingController,only: [:index]# controller: 'accounts/following_accounts'
+        resources "/followers", FollowersController, only: [:index]
+        resources "/following", FollowingController, only: [:index]
 
         post "/follow",   AccountsController, :follow, as: :follow
         post "/unfollow", AccountsController, :unfollow, as: :unfollow
