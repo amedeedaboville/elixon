@@ -22,6 +22,7 @@ defmodule Elixon.Web do
       import Plug.Conn
       import Elixon.Web.Router.Helpers
       import Elixon.Web.Gettext
+      import Canary.Plugs
     end
   end
 

@@ -60,6 +60,8 @@ config :authable,
   scopes: ~w(read write session),
   renderer: Authable.Renderer.RestApi
 
+config :canary, repo: Elixon.Repo
+
 import_config "initializers/ostatus.exs"
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

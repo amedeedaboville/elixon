@@ -17,7 +17,11 @@ defmodule Elixon.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {Elixon.Application, []},
-     extra_applications: [:logger, :runtime_tools]]
+     extra_applications: [:logger, 
+                          :runtime_tools,
+                          :coherence,
+                          :scrivener_ecto,
+     ]]
   end
 
   # Specifies which paths to compile per environment.
@@ -33,7 +37,12 @@ defmodule Elixon.Mixfile do
      {:phoenix_ecto, "~> 3.2"},
      {:postgrex, ">= 0.0.0"},
      {:gettext, "~> 0.11"},
-     {:cowboy, "~> 1.0"}]
+     {:hunter, "~> 0.3.0"},
+     #{:shield, "~> 0.7.0"},
+     {:coherence, "~> 0.4.0"},
+     {:scrivener_ecto, "~> 1.0"},
+     {:canary, "~> 1.1.1"},
+     {:cowboy, "~> 1.0", override: true}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
