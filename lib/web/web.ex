@@ -29,7 +29,7 @@ defmodule Elixon.Web do
 
   def view do
     quote do
-      use Phoenix.View, root: "lib/elixon/web/templates",
+      use Phoenix.View, root: "lib/web/templates",
                         namespace: Elixon.Web
 
       # Import convenience functions from controllers

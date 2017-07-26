@@ -1,15 +1,16 @@
 defmodule Elixon.Web.Router do
   use Elixon.Web, :router
+  alias Elixon.Web
 
   pipeline :api do
     plug :accepts, ["json"]
   end
     
-  get  "/", HomeController, :index
+  get  "/", Elixon.Web.HomeController, :index
   get "/about",      AboutController, :show
   get "/about/more", AboutController, :more
   get "/terms",      AboutController, :terms
-  get "/web/*any", HomeController, :index, as: :web
+  get "/web/*any", Elixon.Web.HomeController, :index, as: :web
     
   scope "/api", Elixon.Web do
     pipe_through :api
@@ -45,7 +46,7 @@ defmodule Elixon.Web.Router do
       end
 
       scope "/timelines" do
-        resources "/home", HomeController, only: [:show], singleton: true
+        resources "/home", Elixon.Web.HomeController, only: [:show], singleton: true
         resources "/public", PublicController, only: [:show], singleton: true
         resources "/tag", TagController, only: [:show]
       end

@@ -7,19 +7,19 @@ defmodule Elixon.Web.Api.V1.NotificationsController do
   use Elixon.Web, :controller
   alias Elixon.{Repo, Notification, User}
 
-  plug :load_resource, model: Elixon.Notification
-  plug :load_resource, model: Elixon.Notification
+  plug :load_resource, model: Elixon.Account, preload: :notifications
 
 
   @notifications_limit 15
-  def index(conn, id) do
-    conn |> json(conn.notifications)
+  def index(conn, _params) do
+    conn |> json(:account)
     #  each_serializer: REST.NotificationSerializer,
     #  relationships: StatusRelationshipsPresenter.new(target_statuses_from_notifications, current_user.account_id)
     
   end
 
   def show(conn, %{"id" => id}) do
+    IO.inspect("in show notifications, with id #{id}")
     conn |> json(Repo.Notifications.find(id) |> NotificationSerializer.to_map)
   end
 
@@ -34,7 +34,7 @@ defmodule Elixon.Web.Api.V1.NotificationsController do
     conn |> render_empty
   end
 
-  def dismiss(conn, id) do
+  def dismiss(conn,_params) do
     #current_user |> Repo.Assoc.assoc(:notifications) |> Repo.find(id) |> Repo.delete
     conn |> render_empty
   end
