@@ -5,7 +5,7 @@ defmodule Elixon.Web.HomeController do
   #alias Elixon.{Repo, Notification, User}
 
   def index(conn, _params) do
-    render conn, "home/index.html"
+    render conn, "home/index.html", page_title: "Elixon", content: "Hello world?"
   end
 
 

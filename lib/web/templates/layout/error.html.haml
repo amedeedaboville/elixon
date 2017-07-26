@@ -3,7 +3,7 @@
   %head
     %meta{ content: 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type' }/
     %meta{ charset: 'utf-8' }/
-    %title= yield :page_title
+    %title= :page_title
     %meta{ content: 'width=device-width,initial-scale=1', name: 'viewport' }/
     %link{ href: 'https://fonts.googleapis.com/css?family=Roboto:400', rel: 'stylesheet' }/
     :css
@@ -33,4 +33,4 @@
     .dialog
       %img{ alt: 'Mastodon', src: '/oops.png' }/
       %div
-        %h1= yield :content
+        %h1= :content

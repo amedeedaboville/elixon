@@ -2,7 +2,7 @@
   = javascript_pack_tag 'public', integrity: true, crossorigin: 'anonymous'
 
 - content_for :content do
-  .container= yield
+  .container -#= yield
   .footer
     - if !user_signed_in? && single_user_mode?
       %span.single-user-login
@@ -12,6 +12,8 @@
     - else
       %span.domain= link_to site_hostname, root_path
     %span.powered-by
-      != t('generic.powered_by', link: link_to('Mastodon', 'https://joinmastodon.org'))
+      <!---!= t('generic.powered_by', link: link_to('Mastodon', 'https://joinmastodon.org'))-->
 
-= render template: 'layouts/application'
+<!--= render LayoutView-->
+= Calliope.render LayoutView
+<!--- = render template: 'layout/application'-->
