@@ -1,2 +1,48 @@
 deps/
 _build/
+
+# Ignore all logfiles and tempfiles.
+/log/*
+!/log/.keep
+/tmp
+coverage
+priv/static/system
+priv/static/assets
+priv/static/packs
+priv/static/packs-test
+priv/static/sw.js
+.env
+.env.production
+node_modules/
+build/
+
+# Ignore Vagrant files
+.vagrant/
+
+# Ignore Capistrano customizations
+config/deploy/*
+
+# Ignore IDE files
+.vscode/
+.idea/
+
+# Ignore postgres + redis volume optionally created by docker-compose
+postgres
+redis
+
+# Ignore Apple files
+.DS_Store
+
+# Ignore vim files
+*~
+*.swp
+
+# Ignore npm debug log
+npm-debug.log
+
+# Ignore yarn log files
+yarn-error.log
+yarn-debug.log
+
+# Ignore Docker option files
+docker-compose.override.yml
