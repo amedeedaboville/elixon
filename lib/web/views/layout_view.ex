@@ -10,7 +10,7 @@ defmodule Elixon.Web.LayoutView do
     "Awesome New Title!"
   end
   def stylesheet_pack_tag(pack_name, opts \\ []) do
-    src = "packs/#{pack_name}.js"
+    src = "packs/#{pack_name}.css"
     Phoenix.HTML.Tag.content_tag(:link, "",
                                  Keyword.put_new(opts, :rel, "stylesheet")
                                  |> Keyword.put_new(:href, src)
@@ -18,7 +18,7 @@ defmodule Elixon.Web.LayoutView do
   end
   def javascript_pack_tag(pack_name, opts \\ []) do
     #render "javascript_pack_tag.html", pack_name: pack_name
-    src = "packs/#{pack_name}.css"
+    src = "packs/#{pack_name}.js"
     Phoenix.HTML.Tag.content_tag(:script, "",
                          Keyword.put_new(opts, :src, src)
                          |> Keyword.put_new(:integrity, "true")
