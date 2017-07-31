@@ -10,7 +10,7 @@ const { publicPath } = require('./configuration.js');
 const path = require('path');
 const serviceWorkerEntry = '../../lib/web/javascript/mastodon/service_worker/entry.js'
 module.exports = merge(sharedConfig, {
-  output: { filename: '[name]-[chunkhash].js' },
+  output: { filename: '[name].js' },
   devtool: 'source-map', // separate sourcemap file, suitable for production
   stats: 'normal',
 

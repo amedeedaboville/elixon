@@ -5,7 +5,6 @@ const webpack = require('webpack');
 const { basename, dirname, join, relative, resolve, sep } = require('path');
 const { sync } = require('glob');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const ManifestPlugin = require('webpack-manifest-plugin');
 const extname = require('path-complete-extname');
 const { env, settings, output, loadersDir } = require('./configuration.js');
 const localePackPaths = require('./generateLocalePacks');
@@ -33,7 +32,7 @@ module.exports = {
 
   output: {
     filename: '[name].js',
-    chunkFilename: '[name]-[chunkhash].js',
+    chunkFilename: '[name].js',
     path: output.path,
     publicPath: output.publicPath,
   },
@@ -44,11 +43,7 @@ module.exports = {
 
   plugins: [
     new webpack.EnvironmentPlugin(JSON.parse(JSON.stringify(env))),
-    new ExtractTextPlugin(env.NODE_ENV === 'production' ? '[name]-[hash].css' : '[name].css'),
-    new ManifestPlugin({
-      publicPath: output.publicPath,
-      writeToFileEmit: true,
-    }),
+    new ExtractTextPlugin('[name].css'),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'common',
       minChunks: (module, count) => {
