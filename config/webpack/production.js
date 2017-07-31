@@ -8,7 +8,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const OfflinePlugin = require('offline-plugin');
 const { publicPath } = require('./configuration.js');
 const path = require('path');
-
+const serviceWorkerEntry = '../../lib/web/javascript/mastodon/service_worker/entry.js'
 module.exports = merge(sharedConfig, {
   output: { filename: '[name]-[chunkhash].js' },
   devtool: 'source-map', // separate sourcemap file, suitable for production
@@ -46,7 +46,7 @@ module.exports = merge(sharedConfig, {
       publicPath: publicPath, // sw.js must be served from the root to avoid scope issues
       caches: { }, // do not cache things, we only use it for push notifications for now
       ServiceWorker: {
-        entry: path.join(__dirname, '../../app/javascript/mastodon/service_worker/entry.js'),
+        entry: path.join(__dirname, serviceWorkerEntry),
         cacheName: 'mastodon',
         output: '../sw.js',
         publicPath: '/sw.js',
