@@ -1,11 +1,20 @@
 defmodule Elixon.Web.Router do
   use Elixon.Web, :router
+  use Coherence.Router
   alias Elixon.Web
 
   pipeline :api do
     plug :accepts, ["json"]
   end
-    
+
+  pipeline :browser do
+    plug :accepts, ["html"]
+    plug :fetch_session
+    plug :fetch_flash
+    plug :protect_from_forgery
+    plug :put_secure_browser_headers
+    plug Coherence.Authentication.Session
+  end
   get  "/", Elixon.Web.HomeController, :index
   get "/about",      AboutController, :show
   get "/about/more", AboutController, :more
