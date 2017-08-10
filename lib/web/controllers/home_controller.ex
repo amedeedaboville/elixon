@@ -1,17 +1,26 @@
 defmodule Elixon.Web.HomeController do
-  #before_action :authenticate_user!
   #before_action :set_initial_state_json
   use Elixon.Web, :controller
   #alias Elixon.{Repo, Notification, User}
+
+  plug :authenticate
 
   def index(conn, _params) do
     render conn, "home/index.html", page_title: "Elixon", content: "Hello world?"
   end
 
 
-  #defp authenticate_user!
-  #  redirect_to(single_user_mode? ? account_path(Account.first) : about_path) unless user_signed_in?
-  #end
+  def authenticate(conn, _) do
+    if Coherence.current_user(conn) do
+      conn
+    else
+    #todo: single user mode
+    #redirect_to(single_user_mode? ? account_path(Account.first) : about_path) unless user_signed_in?
+      conn
+      |> redirect(to: Elixon.Web.Router.Helpers.about_path(conn, :show))
+      |> halt()
+    end
+  end
 
   defp set_initial_state_json() do
     #serializable_resource = Remodel.SerializableResource.new(
