@@ -7,7 +7,7 @@ defmodule Elixon.Web.LayoutView do
   #    render "app.html", :page_title: "Elixon"
   #  end
   def title do
-    "Awesome New Title!"
+    "Elixon Home Controller"
   end
   def stylesheet_pack_tag(pack_name, opts \\ []) do
     src = "packs/#{pack_name}.css"
