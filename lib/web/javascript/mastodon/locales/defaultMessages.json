@@ -6,7 +6,7 @@
         "id": "notification.mention"
       }
     ],
-    "path": "app/javascript/mastodon/actions/notifications.json"
+    "path": "lib/web/javascript/mastodon/actions/notifications.json"
   },
   {
     "descriptors": [
@@ -31,7 +31,7 @@
         "id": "account.unmute"
       }
     ],
-    "path": "app/javascript/mastodon/components/account.json"
+    "path": "lib/web/javascript/mastodon/components/account.json"
   },
   {
     "descriptors": [
@@ -40,7 +40,7 @@
         "id": "column_back_button.label"
       }
     ],
-    "path": "app/javascript/mastodon/components/column_back_button_slim.json"
+    "path": "lib/web/javascript/mastodon/components/column_back_button_slim.json"
   },
   {
     "descriptors": [
@@ -49,7 +49,7 @@
         "id": "column_back_button.label"
       }
     ],
-    "path": "app/javascript/mastodon/components/column_back_button.json"
+    "path": "lib/web/javascript/mastodon/components/column_back_button.json"
   },
   {
     "descriptors": [
@@ -66,7 +66,7 @@
         "id": "column_back_button.label"
       }
     ],
-    "path": "app/javascript/mastodon/components/column_header.json"
+    "path": "lib/web/javascript/mastodon/components/column_header.json"
   },
   {
     "descriptors": [
@@ -75,7 +75,7 @@
         "id": "status.load_more"
       }
     ],
-    "path": "app/javascript/mastodon/components/load_more.json"
+    "path": "lib/web/javascript/mastodon/components/load_more.json"
   },
   {
     "descriptors": [
@@ -84,7 +84,7 @@
         "id": "loading_indicator.label"
       }
     ],
-    "path": "app/javascript/mastodon/components/loading_indicator.json"
+    "path": "lib/web/javascript/mastodon/components/loading_indicator.json"
   },
   {
     "descriptors": [
@@ -105,7 +105,7 @@
         "id": "status.sensitive_toggle"
       }
     ],
-    "path": "app/javascript/mastodon/components/media_gallery.json"
+    "path": "lib/web/javascript/mastodon/components/media_gallery.json"
   },
   {
     "descriptors": [
@@ -114,7 +114,7 @@
         "id": "missing_indicator.label"
       }
     ],
-    "path": "app/javascript/mastodon/components/missing_indicator.json"
+    "path": "lib/web/javascript/mastodon/components/missing_indicator.json"
   },
   {
     "descriptors": [
@@ -171,7 +171,7 @@
         "id": "status.unmute_conversation"
       }
     ],
-    "path": "app/javascript/mastodon/components/status_action_bar.json"
+    "path": "lib/web/javascript/mastodon/components/status_action_bar.json"
   },
   {
     "descriptors": [
@@ -184,7 +184,7 @@
         "id": "status.show_less"
       }
     ],
-    "path": "app/javascript/mastodon/components/status_content.json"
+    "path": "lib/web/javascript/mastodon/components/status_content.json"
   },
   {
     "descriptors": [
@@ -193,7 +193,7 @@
         "id": "status.reblogged_by"
       }
     ],
-    "path": "app/javascript/mastodon/components/status.json"
+    "path": "lib/web/javascript/mastodon/components/status.json"
   },
   {
     "descriptors": [
@@ -226,7 +226,7 @@
         "id": "video_player.video_error"
       }
     ],
-    "path": "app/javascript/mastodon/components/video_player.json"
+    "path": "lib/web/javascript/mastodon/components/video_player.json"
   },
   {
     "descriptors": [
@@ -255,7 +255,7 @@
         "id": "confirmations.mute.message"
       }
     ],
-    "path": "app/javascript/mastodon/containers/status_container.json"
+    "path": "lib/web/javascript/mastodon/containers/status_container.json"
   },
   {
     "descriptors": [
@@ -264,7 +264,7 @@
         "id": "account.media"
       }
     ],
-    "path": "app/javascript/mastodon/features/account_gallery/index.json"
+    "path": "lib/web/javascript/mastodon/features/account_gallery/index.json"
   },
   {
     "descriptors": [
@@ -293,7 +293,7 @@
         "id": "confirmations.domain_block.message"
       }
     ],
-    "path": "app/javascript/mastodon/features/account_timeline/containers/header_container.json"
+    "path": "lib/web/javascript/mastodon/features/account_timeline/containers/header_container.json"
   },
   {
     "descriptors": [
@@ -362,7 +362,7 @@
         "id": "account.followers"
       }
     ],
-    "path": "app/javascript/mastodon/features/account/components/action_bar.json"
+    "path": "lib/web/javascript/mastodon/features/account/components/action_bar.json"
   },
   {
     "descriptors": [
@@ -383,7 +383,7 @@
         "id": "account.follows_you"
       }
     ],
-    "path": "app/javascript/mastodon/features/account/components/header.json"
+    "path": "lib/web/javascript/mastodon/features/account/components/header.json"
   },
   {
     "descriptors": [
@@ -392,7 +392,7 @@
         "id": "column.blocks"
       }
     ],
-    "path": "app/javascript/mastodon/features/blocks/index.json"
+    "path": "lib/web/javascript/mastodon/features/blocks/index.json"
   },
   {
     "descriptors": [
@@ -409,7 +409,7 @@
         "id": "home.column_settings.advanced"
       }
     ],
-    "path": "app/javascript/mastodon/features/community_timeline/components/column_settings.json"
+    "path": "lib/web/javascript/mastodon/features/community_timeline/components/column_settings.json"
   },
   {
     "descriptors": [
@@ -422,7 +422,7 @@
         "id": "empty_column.community"
       }
     ],
-    "path": "app/javascript/mastodon/features/community_timeline/index.json"
+    "path": "lib/web/javascript/mastodon/features/community_timeline/index.json"
   },
   {
     "descriptors": [
@@ -443,7 +443,7 @@
         "id": "compose_form.publish_loud"
       }
     ],
-    "path": "app/javascript/mastodon/features/compose/components/compose_form.json"
+    "path": "lib/web/javascript/mastodon/features/compose/components/compose_form.json"
   },
   {
     "descriptors": [
@@ -488,7 +488,7 @@
         "id": "emoji_button.flags"
       }
     ],
-    "path": "app/javascript/mastodon/features/compose/components/emoji_picker_dropdown.json"
+    "path": "lib/web/javascript/mastodon/features/compose/components/emoji_picker_dropdown.json"
   },
   {
     "descriptors": [
@@ -497,7 +497,7 @@
         "id": "navigation_bar.edit_profile"
       }
     ],
-    "path": "app/javascript/mastodon/features/compose/components/navigation_bar.json"
+    "path": "lib/web/javascript/mastodon/features/compose/components/navigation_bar.json"
   },
   {
     "descriptors": [
@@ -538,7 +538,7 @@
         "id": "privacy.change"
       }
     ],
-    "path": "app/javascript/mastodon/features/compose/components/privacy_dropdown.json"
+    "path": "lib/web/javascript/mastodon/features/compose/components/privacy_dropdown.json"
   },
   {
     "descriptors": [
@@ -547,7 +547,7 @@
         "id": "reply_indicator.cancel"
       }
     ],
-    "path": "app/javascript/mastodon/features/compose/components/reply_indicator.json"
+    "path": "lib/web/javascript/mastodon/features/compose/components/reply_indicator.json"
   },
   {
     "descriptors": [
@@ -556,7 +556,7 @@
         "id": "search_results.total"
       }
     ],
-    "path": "app/javascript/mastodon/features/compose/components/search_results.json"
+    "path": "lib/web/javascript/mastodon/features/compose/components/search_results.json"
   },
   {
     "descriptors": [
@@ -565,7 +565,7 @@
         "id": "search.placeholder"
       }
     ],
-    "path": "app/javascript/mastodon/features/compose/components/search.json"
+    "path": "lib/web/javascript/mastodon/features/compose/components/search.json"
   },
   {
     "descriptors": [
@@ -574,7 +574,7 @@
         "id": "upload_button.label"
       }
     ],
-    "path": "app/javascript/mastodon/features/compose/components/upload_button.json"
+    "path": "lib/web/javascript/mastodon/features/compose/components/upload_button.json"
   },
   {
     "descriptors": [
@@ -583,7 +583,7 @@
         "id": "upload_form.undo"
       }
     ],
-    "path": "app/javascript/mastodon/features/compose/components/upload_form.json"
+    "path": "lib/web/javascript/mastodon/features/compose/components/upload_form.json"
   },
   {
     "descriptors": [
@@ -592,7 +592,7 @@
         "id": "upload_progress.label"
       }
     ],
-    "path": "app/javascript/mastodon/features/compose/components/upload_progress.json"
+    "path": "lib/web/javascript/mastodon/features/compose/components/upload_progress.json"
   },
   {
     "descriptors": [
@@ -601,7 +601,7 @@
         "id": "compose_form.sensitive"
       }
     ],
-    "path": "app/javascript/mastodon/features/compose/containers/sensitive_button_container.json"
+    "path": "lib/web/javascript/mastodon/features/compose/containers/sensitive_button_container.json"
   },
   {
     "descriptors": [
@@ -610,7 +610,7 @@
         "id": "compose_form.spoiler"
       }
     ],
-    "path": "app/javascript/mastodon/features/compose/containers/spoiler_button_container.json"
+    "path": "lib/web/javascript/mastodon/features/compose/containers/spoiler_button_container.json"
   },
   {
     "descriptors": [
@@ -627,7 +627,7 @@
         "id": "compose_form.privacy_disclaimer"
       }
     ],
-    "path": "app/javascript/mastodon/features/compose/containers/warning_container.json"
+    "path": "lib/web/javascript/mastodon/features/compose/containers/warning_container.json"
   },
   {
     "descriptors": [
@@ -660,7 +660,7 @@
         "id": "navigation_bar.logout"
       }
     ],
-    "path": "app/javascript/mastodon/features/compose/index.json"
+    "path": "lib/web/javascript/mastodon/features/compose/index.json"
   },
   {
     "descriptors": [
@@ -669,7 +669,7 @@
         "id": "column.favourites"
       }
     ],
-    "path": "app/javascript/mastodon/features/favourited_statuses/index.json"
+    "path": "lib/web/javascript/mastodon/features/favourited_statuses/index.json"
   },
   {
     "descriptors": [
@@ -682,7 +682,7 @@
         "id": "follow_request.reject"
       }
     ],
-    "path": "app/javascript/mastodon/features/follow_requests/components/account_authorize.json"
+    "path": "lib/web/javascript/mastodon/features/follow_requests/components/account_authorize.json"
   },
   {
     "descriptors": [
@@ -691,7 +691,7 @@
         "id": "column.follow_requests"
       }
     ],
-    "path": "app/javascript/mastodon/features/follow_requests/index.json"
+    "path": "lib/web/javascript/mastodon/features/follow_requests/index.json"
   },
   {
     "descriptors": [
@@ -768,7 +768,7 @@
         "id": "getting_started.open_source_notice"
       }
     ],
-    "path": "app/javascript/mastodon/features/getting_started/index.json"
+    "path": "lib/web/javascript/mastodon/features/getting_started/index.json"
   },
   {
     "descriptors": [
@@ -777,7 +777,7 @@
         "id": "empty_column.hashtag"
       }
     ],
-    "path": "app/javascript/mastodon/features/hashtag_timeline/index.json"
+    "path": "lib/web/javascript/mastodon/features/hashtag_timeline/index.json"
   },
   {
     "descriptors": [
@@ -806,7 +806,7 @@
         "id": "home.column_settings.advanced"
       }
     ],
-    "path": "app/javascript/mastodon/features/home_timeline/components/column_settings.json"
+    "path": "lib/web/javascript/mastodon/features/home_timeline/components/column_settings.json"
   },
   {
     "descriptors": [
@@ -827,7 +827,7 @@
         "id": "empty_column.home.public_timeline"
       }
     ],
-    "path": "app/javascript/mastodon/features/home_timeline/index.json"
+    "path": "lib/web/javascript/mastodon/features/home_timeline/index.json"
   },
   {
     "descriptors": [
@@ -836,7 +836,7 @@
         "id": "column.mutes"
       }
     ],
-    "path": "app/javascript/mastodon/features/mutes/index.json"
+    "path": "lib/web/javascript/mastodon/features/mutes/index.json"
   },
   {
     "descriptors": [
@@ -845,7 +845,7 @@
         "id": "notifications.clear"
       }
     ],
-    "path": "app/javascript/mastodon/features/notifications/components/clear_column_button.json"
+    "path": "lib/web/javascript/mastodon/features/notifications/components/clear_column_button.json"
   },
   {
     "descriptors": [
@@ -886,7 +886,7 @@
         "id": "notifications.column_settings.reblog"
       }
     ],
-    "path": "app/javascript/mastodon/features/notifications/components/column_settings.json"
+    "path": "lib/web/javascript/mastodon/features/notifications/components/column_settings.json"
   },
   {
     "descriptors": [
@@ -903,7 +903,7 @@
         "id": "notification.reblog"
       }
     ],
-    "path": "app/javascript/mastodon/features/notifications/components/notification.json"
+    "path": "lib/web/javascript/mastodon/features/notifications/components/notification.json"
   },
   {
     "descriptors": [
@@ -916,7 +916,7 @@
         "id": "notifications.clear"
       }
     ],
-    "path": "app/javascript/mastodon/features/notifications/containers/column_settings_container.json"
+    "path": "lib/web/javascript/mastodon/features/notifications/containers/column_settings_container.json"
   },
   {
     "descriptors": [
@@ -929,7 +929,7 @@
         "id": "empty_column.notifications"
       }
     ],
-    "path": "app/javascript/mastodon/features/notifications/index.json"
+    "path": "lib/web/javascript/mastodon/features/notifications/index.json"
   },
   {
     "descriptors": [
@@ -942,7 +942,7 @@
         "id": "empty_column.public"
       }
     ],
-    "path": "app/javascript/mastodon/features/public_timeline/index.json"
+    "path": "lib/web/javascript/mastodon/features/public_timeline/index.json"
   },
   {
     "descriptors": [
@@ -951,7 +951,7 @@
         "id": "standalone.public_title"
       }
     ],
-    "path": "app/javascript/mastodon/features/standalone/public_timeline/index.json"
+    "path": "lib/web/javascript/mastodon/features/standalone/public_timeline/index.json"
   },
   {
     "descriptors": [
@@ -984,7 +984,7 @@
         "id": "status.report"
       }
     ],
-    "path": "app/javascript/mastodon/features/status/components/action_bar.json"
+    "path": "lib/web/javascript/mastodon/features/status/components/action_bar.json"
   },
   {
     "descriptors": [
@@ -997,7 +997,7 @@
         "id": "confirmations.delete.message"
       }
     ],
-    "path": "app/javascript/mastodon/features/status/index.json"
+    "path": "lib/web/javascript/mastodon/features/status/index.json"
   },
   {
     "descriptors": [
@@ -1010,7 +1010,7 @@
         "id": "boost_modal.combo"
       }
     ],
-    "path": "app/javascript/mastodon/features/ui/components/boost_modal.json"
+    "path": "lib/web/javascript/mastodon/features/ui/components/boost_modal.json"
   },
   {
     "descriptors": [
@@ -1027,7 +1027,7 @@
         "id": "bundle_column_error.retry"
       }
     ],
-    "path": "app/javascript/mastodon/features/ui/components/bundle_column_error.json"
+    "path": "lib/web/javascript/mastodon/features/ui/components/bundle_column_error.json"
   },
   {
     "descriptors": [
@@ -1044,7 +1044,7 @@
         "id": "bundle_modal_error.close"
       }
     ],
-    "path": "app/javascript/mastodon/features/ui/components/bundle_modal_error.json"
+    "path": "lib/web/javascript/mastodon/features/ui/components/bundle_modal_error.json"
   },
   {
     "descriptors": [
@@ -1053,7 +1053,7 @@
         "id": "confirmation_modal.cancel"
       }
     ],
-    "path": "app/javascript/mastodon/features/ui/components/confirmation_modal.json"
+    "path": "lib/web/javascript/mastodon/features/ui/components/confirmation_modal.json"
   },
   {
     "descriptors": [
@@ -1062,7 +1062,7 @@
         "id": "lightbox.close"
       }
     ],
-    "path": "app/javascript/mastodon/features/ui/components/media_modal.json"
+    "path": "lib/web/javascript/mastodon/features/ui/components/media_modal.json"
   },
   {
     "descriptors": [
@@ -1163,7 +1163,7 @@
         "id": "onboarding.skip"
       }
     ],
-    "path": "app/javascript/mastodon/features/ui/components/onboarding_modal.json"
+    "path": "lib/web/javascript/mastodon/features/ui/components/onboarding_modal.json"
   },
   {
     "descriptors": [
@@ -1180,7 +1180,7 @@
         "id": "report.target"
       }
     ],
-    "path": "app/javascript/mastodon/features/ui/components/report_modal.json"
+    "path": "lib/web/javascript/mastodon/features/ui/components/report_modal.json"
   },
   {
     "descriptors": [
@@ -1205,7 +1205,7 @@
         "id": "tabs_bar.federated_timeline"
       }
     ],
-    "path": "app/javascript/mastodon/features/ui/components/tabs_bar.json"
+    "path": "lib/web/javascript/mastodon/features/ui/components/tabs_bar.json"
   },
   {
     "descriptors": [
@@ -1214,7 +1214,7 @@
         "id": "upload_area.title"
       }
     ],
-    "path": "app/javascript/mastodon/features/ui/components/upload_area.json"
+    "path": "lib/web/javascript/mastodon/features/ui/components/upload_area.json"
   },
   {
     "descriptors": [
@@ -1223,6 +1223,6 @@
         "id": "lightbox.close"
       }
     ],
-    "path": "app/javascript/mastodon/features/ui/components/video_modal.json"
+    "path": "lib/web/javascript/mastodon/features/ui/components/video_modal.json"
   }
 ]
