@@ -38,3 +38,4 @@
   %body
     -#{ class: add_rtl_body_class(@body_classes) }
     = @content
+    = render @view_module, @view_template, assigns
