@@ -16,11 +16,11 @@ defmodule Elixon.Web.Router do
     plug Coherence.Authentication.Session
   end
   get  "/", Elixon.Web.HomeController, :index
-  get "/about",      AboutController, :show
-  get "/about/more", AboutController, :more
-  get "/terms",      AboutController, :terms
+  get "/about",      Elixon.Web.AboutController, :show
+  get "/about/more", Elixon.Web.AboutController, :more
+  get "/terms",      Elixon.Web.AboutController, :terms
   get "/web/*any", Elixon.Web.HomeController, :index, as: :web
-    
+
   scope "/api", Elixon.Web do
     pipe_through :api
 
