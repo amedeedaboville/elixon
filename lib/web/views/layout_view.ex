@@ -6,19 +6,19 @@ defmodule Elixon.Web.LayoutView do
   #    Map.putassigns.
   #    render "app.html", :page_title: "Elixon"
   #  end
+
   def title do
     "Elixon Home Controller"
   end
   def stylesheet_pack_tag(pack_name, opts \\ []) do
-    src = "packs/#{pack_name}.css"
+    src = "packs/#{pack_name}.css" #todo: call static_path
     Phoenix.HTML.Tag.content_tag(:link, "",
                                  Keyword.put_new(opts, :rel, "stylesheet")
                                  |> Keyword.put_new(:href, src)
     )
   end
   def javascript_pack_tag(pack_name, opts \\ []) do
-    #render "javascript_pack_tag.html", pack_name: pack_name
-    src = "packs/#{pack_name}.js"
+    src = "packs/#{pack_name}.js" #todo: call static_path
     Phoenix.HTML.Tag.content_tag(:script, "",
                          Keyword.put_new(opts, :src, src)
                          |> Keyword.put_new(:integrity, "true")
